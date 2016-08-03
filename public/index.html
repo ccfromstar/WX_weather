@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>天气预报</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/amazeui.min.js"></script>
+		<script type="text/javascript" src="js/setting.js"></script>
+		<script type="text/javascript" src="js/basic.js"></script>
+		<script type="text/javascript" src="js/weather.js"></script>
+		<link rel="stylesheet" href="css/amazeui.min.css" />
+		<link rel="stylesheet" href="css/basic.css" />
+	</head>
+	<body class="am-with-fixed-navbar">
+		<!-- Header -->
+		<header data-am-widget="header" class="am-header am-header-default am-no-layout am-header-fixed">
+			<h1 class="am-header-title">
+    		<a href="#title-link">上海邮轮中心</a>
+  		</h1>
+		</header>
+		
+		<!-- Body -->
+		<div class="weather_top">
+			<div class="left">
+				<p>监测站点：宝山气象局</p>
+				<h1 id="Temperature"></h1>
+				<hgroup id="warn"></hgroup>
+			</div>
+			<div class="right">
+				<p id="CollectDate"></p>
+				<p id="Rain_sum_60"></p>
+				<p id="RelativeHumidity"></p>
+				<p id="WindSpeed"></p>
+				<p id="Visibility"></p>
+				<p id="AirPressure"></p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="weather_tobbom">
+			<h1>宝山10日天气预报</h1>
+			<ul id="10day"></ul>
+		</div>
+		
+		<!-- Footer -->
+		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+			<ul class="am-navbar-nav am-cf am-avg-sm-4">
+				<li class="am-active">
+					<a href="index.html">
+						<span class="am-icon-cloud"></span>
+						<span class="am-navbar-label">天气预报</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:alert('功能建设中...');">
+						<span class="am-icon-ship"></span>
+						<span class="am-navbar-label">邮轮气象</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
