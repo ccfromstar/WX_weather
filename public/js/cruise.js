@@ -47,6 +47,8 @@ function getNextDay(d) {
 }
 
 function getCruiseLine(i) {
+	var $modal = $('#my-modal-loading');
+	$modal.modal();
 	var dat = $('#start_date').val();
 	var arr1 = dat.split('-');
 	$.ajax({
