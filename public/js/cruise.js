@@ -24,7 +24,13 @@ function getList() {
 				_list += '</li>';
 			}
 			$('#c_list').html(_list);
-			getCruiseLine(0);
+			if(_list){
+				getCruiseLine(0);
+			}else{
+				$('#c_line').html('');
+				var $modal = $('#my-modal-loading');
+				$modal.modal('close');
+			}
 		}
 	});
 }
@@ -71,6 +77,7 @@ function getCruiseLine(i) {
 					//设置邮轮选中效果
 					$('#c_list').find('li').css('color', '#fff');
 					$('#c_list').find('li').eq(i).css('color', '#E0690C');
+					var $modal = $('#my-modal-loading');
 					$modal.modal('close');
 				}
 			});
