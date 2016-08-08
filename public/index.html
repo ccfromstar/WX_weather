@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<title>天气预报</title>
 		<meta charset="UTF-8">
@@ -15,6 +16,7 @@
 		<link rel="stylesheet" href="css/amazeui.min.css" />
 		<link rel="stylesheet" href="css/basic.css" />
 	</head>
+
 	<body class="am-with-fixed-navbar">
 		<!-- Header -->
 		<header data-am-widget="header" class="am-header am-header-default am-no-layout am-header-fixed">
@@ -22,7 +24,7 @@
     		<a href="#title-link">上海邮轮中心</a>
   		</h1>
 		</header>
-		
+
 		<!-- Body -->
 		<div class="weather_top">
 			<div class="left">
@@ -44,7 +46,16 @@
 			<h1>宝山10日天气预报</h1>
 			<ul id="10day"></ul>
 		</div>
-		
+
+		<div class="am-modal am-modal-loading am-modal-no-btn" tabtndex="-1" id="my-modal-loading">
+			<div class="am-modal-dialog">
+				<div class="am-modal-hd">数据加载中...</div>
+				<div class="am-modal-bd">
+					<span class="am-icon-spinner am-icon-spin"></span>
+				</div>
+			</div>
+		</div>
+
 		<!-- Footer -->
 		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
 			<ul class="am-navbar-nav am-cf am-avg-sm-4">
@@ -63,4 +74,5 @@
 			</ul>
 		</div>
 	</body>
+
 </html>
