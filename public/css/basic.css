@@ -676,6 +676,50 @@ strong {
 	clear: both;
 }
 
+.am-form-field{
+	display: inline-block !important;
+}
+
+#c_search{
+	
+}
+
+.am-form-group{
+	margin-bottom: 0 !important;
+}
+
+.am-form-group label{
+	display:block;
+	color:#fff;
+}
+
+.am-form p{
+	margin: 0 !important;
+}
+
+.am-form h5{
+	color:#fff;
+}
+
+#c_list{
+	padding-left: 0 !important;
+}
+
+#c_list li{
+	width:100%;
+	color:#fff;
+	border-bottom: 1px solid #fff;
+	padding:10px;
+	font-size: 14px;
+	font-weight: bold;	
+}
+
+#t_line td,#t_line th{
+	padding: 10px !important;
+	border:1px solid #F0F0EE;
+	text-align: center;
+}
+
 @media only screen and (min-width: 100px) and (max-width: 320px) {
 	.weather_top h1 {
 		margin-top: 5px;
