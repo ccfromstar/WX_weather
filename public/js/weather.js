@@ -1,12 +1,15 @@
 $(function() {
 	var $modal = $('#my-modal-loading');
 	$modal.modal();
+	$modal.modal('close');
+	//alert("气象局服务器连接失败！请稍后再访问！");
 	$.ajax({
 		type: "get",
 		url: hosts + "/BsReal",
+		timeout: 3000,
 		success: function(data) {
 			if (!data) {
-				alert('服务器连接失败！');
+				//alert('服务器连接失败！');
 				$modal.modal('close');
 				return false;
 			}
@@ -44,6 +47,12 @@ $(function() {
 					});
 				}
 			});
+		},
+		complete: function(XMLHttpRequest, status) { //请求完成后最终执行参数
+			if (status == 'timeout') { //超时,status还有success,error等值的情况
+				//ajaxTimeoutTest.abort();　　　　　
+				alert('气象局服务器连接失败！请稍后再访问！');　　　
+			}　　
 		}
 	});
 
