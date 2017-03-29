@@ -37,11 +37,17 @@ exports.Bs7Day = function(req, res) {
 		method: 'POST'
 	}, function(err, response, body) {
 		if (!err && response.statusCode == 200) {
+			//console.log(body);
 			var arr = body.split('rowOrder');
 			var result = '[';
-			for (var i = 1; i < arr.length; i++) {
+			for (var i = 1; i < arr.length - 1; i++) {
+				/*
+				console.log(getXMLNodeValue('Date', arr[i]));
+				console.log(getXMLNodeValue('DayWeather', arr[i]));
+				console.log(getXMLNodeValue('TempMin', arr[i]));
+				console.log(getXMLNodeValue('TempMax', arr[i]));*/
 				var str1 = '{"Date":"' + getXMLNodeValue('Date', arr[i]) + '","DayWeather":"' + getXMLNodeValue('DayWeather', arr[i]) + '","TempMin":"' + getXMLNodeValue('TempMin', arr[i]) + '","TempMax":"' + getXMLNodeValue('TempMax', arr[i]) + '"}';
-				if (i == (arr.length - 1)) {
+				if (i == (arr.length - 2)) {
 					result += str1;
 				} else {
 					result += str1 + ',';
